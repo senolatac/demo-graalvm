@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  my_spring_graalvm_app:
+    build:
+      dockerfile: Dockerfile
+    container_name: my_spring_graalvm_app
+    image: my_spring_graalvm_app_image
+    restart: unless-stopped
+    hostname: my_spring_graalvm_app
+    ports:
+      - "8888:8080"
